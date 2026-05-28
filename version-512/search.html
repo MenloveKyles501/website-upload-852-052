@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>搜索-分类内容持续更新-热门影片片库-高清视频在线播放</title>
+  <meta name="description" content="搜索热门影片片库，按影片名、地区、年份、类型与标签快速筛选高清在线播放内容。">
+  <meta name="keywords" content="分类内容持续更新,热门影片片库,高清视频在线播放,影视分类,热门影片,影片片库,高清播放,搜索,筛选">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./index.html" aria-label="热门影片片库">
+      <span class="brand-mark">影</span>
+      <span class="brand-name">热门影片片库</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a class="nav-link" href="./index.html">首页</a><a class="nav-link" href="./categories.html">分类</a><a class="nav-link" href="./ranking.html">排行榜</a><a class="nav-link active" href="./search.html">搜索</a>
+      <a class="nav-link category-shortcut" href="./popular-library.html">热门片库</a><a class="nav-link category-shortcut" href="./classic-cinema.html">经典光影</a><a class="nav-link category-shortcut" href="./asian-screen.html">亚洲影剧</a><a class="nav-link category-shortcut" href="./global-choice.html">环球精选</a>
+    </nav>
+    <form class="header-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索影片、地区、题材" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+    <button class="menu-button" type="button" data-menu-toggle aria-label="展开导航">☰</button>
+  </div>
+  <div class="mobile-panel" data-mobile-panel>
+    <nav class="mobile-nav" aria-label="移动导航">
+      <a class="nav-link" href="./index.html">首页</a><a class="nav-link" href="./categories.html">分类</a><a class="nav-link" href="./ranking.html">排行榜</a><a class="nav-link active" href="./search.html">搜索</a>
+      <a class="nav-link category-shortcut" href="./popular-library.html">热门片库</a><a class="nav-link category-shortcut" href="./classic-cinema.html">经典光影</a><a class="nav-link category-shortcut" href="./asian-screen.html">亚洲影剧</a><a class="nav-link category-shortcut" href="./global-choice.html">环球精选</a>
+    </nav>
+    <form class="mobile-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索影片" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+<main>
+  <section class="page-hero search-hero">
+    <span class="hero-kicker">片库搜索</span>
+    <h1>搜索高清影片</h1>
+    <p>输入影片名、地区、年份、题材或标签，快速筛选片库内容。</p>
+    <form class="search-page-form" action="./search.html" method="get">
+      <input type="search" name="q" id="searchPageInput" placeholder="输入关键词" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+  </section>
+  <section class="section">
+    <div class="section-head">
+      <h2 id="searchTitle">片库检索</h2>
+      <a href="./categories.html">按分类浏览</a>
+    </div>
+    <div class="poster-grid four-cols" id="searchResults"></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="footer-brand" href="./index.html">热门影片片库</a>
+      <p>分类内容持续更新页面按题材、地区和热度整理影视内容，保持影片片库信息清晰有序。</p>
+    </div>
+    <div class="footer-links">
+      <a href="./index.html">首页</a>
+      <a href="./categories.html">分类</a>
+      <a href="./ranking.html">排行榜</a>
+      <a href="./search.html">搜索</a>
+      <a href="./popular-library.html">热门片库</a><a href="./classic-cinema.html">经典光影</a><a href="./asian-screen.html">亚洲影剧</a><a href="./global-choice.html">环球精选</a><a href="./suspense-crime.html">悬疑犯罪</a><a href="./romance-drama.html">爱情剧情</a><a href="./action-fantasy.html">动作奇幻</a><a href="./comedy-life.html">喜剧生活</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 热门影片片库 · 分类内容持续更新</div>
+</footer>
+    <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/search-data.js"></script>
+  <script src="./assets/js/search.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

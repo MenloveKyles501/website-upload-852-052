@@ -1,0 +1,11 @@
+(function(){
+var toggle=document.querySelector('.nav-toggle'),panel=document.querySelector('.mobile-panel');
+if(toggle&&panel){toggle.addEventListener('click',function(){panel.classList.toggle('open')})}
+var slides=[].slice.call(document.querySelectorAll('.hero-slide'));
+if(slides.length){var dots=[].slice.call(document.querySelectorAll('.hero-dot')),prev=document.querySelector('[data-hero-prev]'),next=document.querySelector('[data-hero-next]'),i=0,timer=null;function show(n){i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle('active',k===i)});dots.forEach(function(d,k){d.classList.toggle('active',k===i)})}function go(n){show(n);clearInterval(timer);timer=setInterval(function(){show(i+1)},5200)}dots.forEach(function(d,k){d.addEventListener('click',function(){go(k)})});if(prev)prev.addEventListener('click',function(){go(i-1)});if(next)next.addEventListener('click',function(){go(i+1)});timer=setInterval(function(){show(i+1)},5200)}
+function normalize(s){return (s||'').toString().toLowerCase()}
+function applyFilter(scope){var input=scope.querySelector('.filter-search'),region=scope.querySelector('.filter-region'),year=scope.querySelector('.filter-year'),cards=[].slice.call(scope.querySelectorAll('.movie-card')),empty=scope.querySelector('.empty-state');function run(){var q=normalize(input&&input.value),r=region&&region.value,y=year&&year.value,visible=0;cards.forEach(function(card){var text=normalize(card.textContent),ok=(!q||text.indexOf(q)>-1)&&(!r||card.getAttribute('data-region')===r)&&(!y||card.getAttribute('data-year')===y);card.style.display=ok?'':'none';if(ok)visible++});if(empty)empty.style.display=visible?'none':'block'}[input,region,year].forEach(function(el){if(el){el.addEventListener('input',run);el.addEventListener('change',run)}});run()}
+[].slice.call(document.querySelectorAll('[data-filter-scope]')).forEach(applyFilter);
+var searchPage=document.querySelector('[data-search-page]');
+if(searchPage){var p=new URLSearchParams(location.search),q=p.get('q')||'',inp=searchPage.querySelector('.filter-search');if(inp&&!inp.value){inp.value=q}var ev=new Event('input',{bubbles:true});if(inp)inp.dispatchEvent(ev)}
+})();
